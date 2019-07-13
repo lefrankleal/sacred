@@ -6,7 +6,6 @@ import com.facebook.react.ReactApplication;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.appevents.AppEventsLogger;
 import com.inprogress.reactnativeyoutube.ReactNativeYouTube;
-import com.guichaguri.trackplayer.TrackPlayer;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -41,7 +40,6 @@ public class MainApplication extends Application implements ReactApplication {
         new MainReactPackage(),
           new FBSDKPackage(mCallbackManager),
           new ReactNativeYouTube(),
-          new TrackPlayer(),
           new AsyncStoragePackage(),
           new VectorIconsPackage(),
           new RNGestureHandlerPackage()
