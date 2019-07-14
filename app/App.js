@@ -29,10 +29,11 @@ const theme = {
     buttonStyle: {
       height: 50,
       borderRadius: 0,
-      backgroundColor: '#33424C',
-    },
-    // titleStyle: {
-    // }
+      backgroundColor: '#BD742C',
+    }
+  },
+  Icon: {
+    color: 'white'
   }
 };
 

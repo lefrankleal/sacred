@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { Image, View } from 'react-native'
+import { Button, Text } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/Feather'
+import AuthStyle from '../Styles/AuthStyle'
 import AsyncStorage from '@react-native-community/async-storage'
-import { View } from 'react-native'
 import FBSDK from 'react-native-fbsdk'
 
 class Auth extends Component {
@@ -37,14 +40,41 @@ class Auth extends Component {
     )
   }
 
-  componentDidMount = () => {
+  _goToHome = () => {
     this.props.navigation.navigate('Home')
-    // this._checkLogin()
+  }
+
+  componentDidMount = () => {
+    AsyncStorage.getItem('isLogged').then((isLogged) => {
+      if (isLogged === '1') {
+        this.props.navigation.navigate('Login')
+      } else {
+        console.log('not logged');
+      }
+    })
   }
 
   render() {
     return (
-      <View></View>
+      <View style={{ width: '100%', height: '100%' }}>
+        <View style={AuthStyle.topBlock}>
+          <Image style={ AuthStyle.topBlockImage } resizeMode='contain' source={require('../Assets/Images/logo-text-vertical.png')} />
+        </View>
+        <View style={AuthStyle.bottomBlock}>
+          <Button
+            title='REGISTER'
+            buttonStyle={AuthStyle.registerButton}
+            titleStyle={AuthStyle.registerButtonText}
+            onPress={() => this._fbLogin()}
+          />
+          <Button
+            title='Already have an account >>'
+            buttonStyle={AuthStyle.haveAccountButton}
+            titleStyle={AuthStyle.haveAccountButtonText}
+            onPress={this._goToHome}
+          />
+        </View>
+      </View>
     )
   }
 }
