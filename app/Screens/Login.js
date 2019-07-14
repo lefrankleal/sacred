@@ -40,9 +40,9 @@ class Login extends Component {
 
   render() {
     return (
-      <ImageBackground source={require('../Assets/Login.jpg')} style={{ width: '100%', height: '100%' }}>
+      <View style={{ width: '100%', height: '100%' }}>
         <View style={LoginStyle.topBlock}>
-          <Image source={require('../Assets/Logo1.png')} />
+          <Image source={require('../Assets/Images/logo.png')} />
         </View>
         <View style={LoginStyle.bottomBlock}>
           <Text style={LoginStyle.welcomeText}>BIENVENIDOS</Text>
@@ -67,7 +67,7 @@ class Login extends Component {
             onPress={this._goToHome}
           />
         </View>
-      </ImageBackground>
+      </View>
     );
   }
 }
