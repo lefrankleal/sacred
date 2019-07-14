@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet } from 'react-native'
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 
-const HomeStyle = StyleSheet.create({
+const ProductStyle = StyleSheet.create({
   container: {
     height: '100%',
     flex: 1
@@ -33,4 +33,4 @@ const HomeStyle = StyleSheet.create({
     paddingVertical: 10
   }
 });
-export default HomeStyle;
+export default ProductStyle;
