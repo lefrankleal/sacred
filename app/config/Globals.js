@@ -1,3 +1,3 @@
-export default {
-  YOUTUBE_APIKEY: 'AIzaSyD_AkM6FJ-vRvSziB0ycjC25mnEgTEAx3A'
+export default Globals = {
+  YOUTUBE_APIKEY: 'AIzaSyBgVBYvJ9Vn3Fd4GlNchQuy11t2aagSvoQ'
 }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { SafeAreaView, Dimensions, RefreshControl, Image, ScrollView, View } from 'react-native'
+import { SafeAreaView, TouchableHighlight, Image, ScrollView, View } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import RitualStyle from '../Styles/RitualStyle'
 import Icon from 'react-native-vector-icons/Feather'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 class Ritual extends Component {
 
@@ -24,7 +25,7 @@ class Ritual extends Component {
   }
 
   _toggleText = () => {
-    this.setState({textVisible: !this.state.textVisible})
+    this.setState({ textVisible: !this.state.textVisible })
   }
 
   render() {
@@ -33,7 +34,11 @@ class Ritual extends Component {
         <Header
           containerStyle={RitualStyle.headerContainer}
           placement="left"
-          centerComponent={<Image style={RitualStyle.headerImage} resizeMode='contain' source={require('../Assets/Images/logo-text-horizontal.png')} />}
+          centerComponent={
+            <TouchableOpacity onPress={() => this._goTo('Home')}>
+              <Image style={RitualStyle.headerImage} resizeMode='contain' source={require('../Assets/Images/logo-text-horizontal.png')} />
+            </TouchableOpacity>
+          }
           centerContainerStyle={RitualStyle.headerCenterContainer}
           rightComponent={{ icon: 'menu', color: 'gray' }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
@@ -48,62 +53,62 @@ class Ritual extends Component {
           </View>
           <View
             style={{ paddingHorizontal: 25 }}>
-              <View>
-                <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 1</Text>
-                  <Icon
-                    name={this.state.textVisible === true ? 'chevron-down' : 'chevron-right'}
-                    color='white'
-                    size={30}
-                    onPress={ () => {
-                      this._toggleText()
-                    }}
-                  />
-                </View>
-                {this.state.textVisible &&
-                  <Text style={{ fontWeight: 'bold', fontSize: 12, padding: 15 }}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet dolorem eaque atque quos debitis unde perferendis magnam porro commodi! Doloremque magni dolore hic praesentium aliquam sequi tempore dolorem eos?  </Text>
-                }
+            <View>
+              <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 1</Text>
+                <Icon
+                  name={this.state.textVisible === true ? 'chevron-down' : 'chevron-right'}
+                  color='white'
+                  size={30}
+                  onPress={() => {
+                    this._toggleText()
+                  }}
+                />
               </View>
-              <View>
-                <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 2</Text>
-                  <Icon
-                    name='chevron-right'
-                    color='white'
-                    size={30}
-                  />
-                </View>
+              {this.state.textVisible &&
+                <Text style={{ fontWeight: 'bold', fontSize: 12, padding: 15 }}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet dolorem eaque atque quos debitis unde perferendis magnam porro commodi! Doloremque magni dolore hic praesentium aliquam sequi tempore dolorem eos?  </Text>
+              }
+            </View>
+            <View>
+              <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 2</Text>
+                <Icon
+                  name='chevron-right'
+                  color='white'
+                  size={30}
+                />
               </View>
-              <View>
-                <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 3</Text>
-                  <Icon
-                    name='chevron-right'
-                    color='white'
-                    size={30}
-                  />
-                </View>
+            </View>
+            <View>
+              <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 3</Text>
+                <Icon
+                  name='chevron-right'
+                  color='white'
+                  size={30}
+                />
               </View>
-              <View>
-                <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 4</Text>
-                  <Icon
-                    name='chevron-right'
-                    color='white'
-                    size={30}
-                  />
-                </View>
+            </View>
+            <View>
+              <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 4</Text>
+                <Icon
+                  name='chevron-right'
+                  color='white'
+                  size={30}
+                />
               </View>
-              <View>
-                <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                  <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 5</Text>
-                  <Icon
-                    name='chevron-right'
-                    color='white'
-                    size={30}
-                  />
-                </View>
+            </View>
+            <View>
+              <View style={{ backgroundColor: '#BD742C', paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white' }}>RITUAL 5</Text>
+                <Icon
+                  name='chevron-right'
+                  color='white'
+                  size={30}
+                />
               </View>
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>

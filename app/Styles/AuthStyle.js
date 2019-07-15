@@ -10,7 +10,8 @@ const AuthStyle = StyleSheet.create({
     height: height * 0.4
   },
   topBlockImage: {
-    width: width * 0.8
+    width: width * 0.8,
+    height: height * 0.4
   },
   bottomBlock: {
     paddingHorizontal: 35,

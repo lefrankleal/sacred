@@ -56,7 +56,7 @@ class Auth extends Component {
 
   render() {
     return (
-      <View style={{ width: '100%', height: '100%' }}>
+      <View style={{ flex: 1 }}>
         <View style={AuthStyle.topBlock}>
           <Image style={ AuthStyle.topBlockImage } resizeMode='contain' source={require('../Assets/Images/logo-text-vertical.png')} />
         </View>

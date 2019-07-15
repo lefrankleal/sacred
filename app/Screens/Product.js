@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Dimensions, RefreshControl, Image, ScrollView, View, SafeAreaView } from 'react-native'
+import { Dimensions, Image, ScrollView, View, SafeAreaView } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import ProductStyle from '../Styles/ProductStyle'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
@@ -25,7 +26,11 @@ class Product extends Component {
         <Header
           containerStyle={ProductStyle.headerContainer}
           placement="left"
-          centerComponent={<Image style={ProductStyle.headerImage} resizeMode='contain' source={require('../Assets/Images/logo-text-horizontal.png')} />}
+          centerComponent={
+            <TouchableOpacity onPress={() => this._goTo('Home')}>
+              <Image style={ProductStyle.headerImage} resizeMode='contain' source={require('../Assets/Images/logo-text-horizontal.png')} />
+            </TouchableOpacity>
+          }
           centerContainerStyle={ProductStyle.headerCenterContainer}
           rightComponent={{ icon: 'menu', color: 'gray' }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Shop') }}

@@ -18,19 +18,21 @@ const HomeStyle = StyleSheet.create({
     width: 150
   },
   Introduction: {
-    marginHorizontal: 50
+    marginHorizontal: 25,
+    marginBottom: 20
   },
   MiddleButtons: {
     backgroundColor: '#561D6A',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     height: 100,
     paddingVertical: 10
   },
   CategoryButtons: {
+    marginHorizontal: 25,
     flexDirection: 'row',
-    justifyContent: 'center',
-    paddingVertical: 10
+    justifyContent: 'space-between',
+    paddingVertical: 20
   }
 });
 export default HomeStyle;
