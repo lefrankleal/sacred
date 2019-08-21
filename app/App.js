@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'react-native-elements';
-import AppStackNavigator from './config/Router';
+import AppStackNavigator from './config/RouterNew';
 
 const theme = {
   Input: {
