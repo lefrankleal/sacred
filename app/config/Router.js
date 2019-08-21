@@ -1,5 +1,5 @@
 import React from 'react'
-import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator } from 'react-navigation'
+import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator, createDrawerNavigator, DrawerNavigator } from 'react-navigation'
 import Home from '../Screens/Home'
 import Alerts from '../Screens/Alerts'
 import Search from '../Screens/Search'
@@ -9,7 +9,7 @@ import Shop from '../Screens/Shop'
 import Product from '../Screens/Product'
 import Ritual from '../Screens/Ritual'
 import Auth from '../Screens/Auth'
-import Login from '../Screens/Login'
+import Login from '../Screens/SignIn'
 import Icon from 'react-native-vector-icons/Feather'
 
   /**
@@ -131,11 +131,16 @@ const BottomTabNavigator = createBottomTabNavigator(
   }
 )
 
+const Drawer = DrawerNavigator({
+  Stack : { screen : HomeStack },
+  Tabs : { screen : BottomTabNavigator }
+});
+
 export default createAppContainer(
   createSwitchNavigator(
     {
       Auth: Auth,
-      Home: BottomTabNavigator,
+      Home: Drawer,
       Login: Login
     }
   )
