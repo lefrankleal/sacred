@@ -69,11 +69,17 @@ class Auth extends Component {
             onPress={() => this._fbLogin()}
           />
           <Button
-            title='Already have an account >>'
+            title='Continue without account >>'
             buttonStyle={AuthStyle.haveAccountButton}
             titleStyle={AuthStyle.haveAccountButtonText}
             onPress={this._goToHome}
           />
+          {/* <Button
+            title='Already have an account >>'
+            buttonStyle={AuthStyle.haveAccountButton}
+            titleStyle={AuthStyle.haveAccountButtonText}
+            onPress={this._goToHome}
+          /> */}
         </View>
       </View>
     )

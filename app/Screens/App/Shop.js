@@ -22,7 +22,6 @@ class Shop extends Component {
   }
 
   _goTo = (view) => {
-    console.log(view)
     this.props.navigation.navigate(view)
   }
 

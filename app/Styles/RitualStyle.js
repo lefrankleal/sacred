@@ -20,17 +20,36 @@ const RitualStyle = StyleSheet.create({
   Introduction: {
     marginHorizontal: 50
   },
-  MiddleButtons: {
-    backgroundColor: '#561D6A',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    height: 100,
-    paddingVertical: 10
+  intro: {
+    marginHorizontal: width * 0.05,
+    alignItems: 'center'
   },
-  CategoryButtons: {
+  introTitle: {
+    fontWeight: 'bold',
+    fontSize: 20
+  },
+  introDescription: {
+    fontSize: 15
+  },
+  ritualsContainer: {
+    marginHorizontal: width * 0.05,
+    marginVertical: 30
+  },
+  itemButton: {
+    backgroundColor: '#BD742C',
+    paddingHorizontal: 5,
     flexDirection: 'row',
-    justifyContent: 'center',
-    paddingVertical: 10
-  }
+    justifyContent: 'space-between'
+  },
+  itemName: {
+    fontWeight: 'bold',
+    fontSize: 15,
+    color: 'white'
+  },
+  itemDescription: {
+    fontWeight: 'bold',
+    fontSize: 12,
+    padding: 15
+  },
 });
 export default RitualStyle;

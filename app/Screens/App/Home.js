@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Dimensions, RefreshControl, Image, ScrollView, View, SafeAreaView } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import HomeStyle from '../../Styles/HomeStyle'
-import { TouchableOpacity } from 'react-native-gesture-handler'
 import Youtube from '../../Components/Youtube'
 import { DrawerActions } from 'react-navigation';
 
@@ -51,41 +50,55 @@ class Home extends Component {
               That is why at Astral Med, we turn cannabis into
               </Text>
           </View>
-          <View style={HomeStyle.MiddleButtons}>
-            <TouchableOpacity
-              style={{
-                width: width / 2,
-                height: '100%',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-              onPress={() => this._goTo('Shop')}>
-              <Image style={{ width: 80 }} resizeMode='contain' source={require('../../Assets/Images/shop.png')} />
-              <Text style={{ color: 'white', marginLeft: 10, fontWeight: '200', fontSize: 20 }}>Shop{'\n'}Now</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                width: width / 2,
-                height: '100%',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-              onPress={() => this._goTo('Ritual')}>
-              <Image style={{ width: 80 }} resizeMode='contain' source={require('../../Assets/Images/rituals.png')} />
-              <Text style={{ color: 'white', marginLeft: 10, fontWeight: '200', fontSize: 20 }}>Sacred{'\n'}Rituals</Text>
-            </TouchableOpacity>
+          <View style={HomeStyle.SacredLifeStyleLogo}>
+            <Image style={{ height: 80, width: width * 0.8 }} resizeMode='contain' source={require('../../Assets/Images/sacred-lifestyle-logo.png')} />
           </View>
-          <View style={HomeStyle.CategoryButtons}>
-            <Image style={{ height: 80, width: 100 }} resizeMode='contain' source={require('../../Assets/Images/agriculture.png')} />
-            <Image style={{ height: 80, width: 100 }} resizeMode='contain' source={require('../../Assets/Images/medicine.png')} />
-            <Image style={{ height: 80, width: 100 }} resizeMode='contain' source={require('../../Assets/Images/beauty.png')} />
+          <View style={HomeStyle.SacredLifeStyleText}>
+            <Text>It’s time to start using our intuition and take control of our being while working towards more important and transcendent goals. The time has come to return to Mother Earth all that she gives us in abundance by beginning to practice a SACRED lifestyle that allows us to live in peace and harmony with a joyful outlook that frees your spirit and drives your creativity towards a true spiritual awakening!</Text>
           </View>
-          <View style={HomeStyle.CategoryButtons}>
-            <Image style={{ height: 80, width: 100 }} resizeMode='contain' source={require('../../Assets/Images/architecture.png')} />
-            <Image style={{ height: 80, width: 100 }} resizeMode='contain' source={require('../../Assets/Images/nutrition.png')} />
-            <Image style={{ height: 80, width: 100 }} resizeMode='contain' source={require('../../Assets/Images/design.png')} />
+          <View style={HomeStyle.SacredLifeStyleItems}>
+            <View style={HomeStyle.SacredLifeStyleItem}>
+              <View style={HomeStyle.SacredLifeStyleHeader}>
+                <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/innovation.jpg')} />
+              </View>
+              <View style={HomeStyle.SacredLifeStyleContent}>
+                <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/innovation-logo.png')} />
+                <View style={{ flex: 4 }}>
+                  <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Innovation</Text>
+                  <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
+                    Innovation fuels our daily life. By recognizing its power and creativity we shape the future with a holistic approach.
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View style={HomeStyle.SacredLifeStyleItem}>
+              <View style={HomeStyle.SacredLifeStyleHeader}>
+                <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/products.jpg')} />
+              </View>
+              <View style={HomeStyle.SacredLifeStyleContent}>
+                <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/products-logo.png')} />
+                <View style={{ flex: 4 }}>
+                  <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Products</Text>
+                  <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
+                    We are committed to work everyday setting forth our knowledge and industry’s best practices to our customers. By utilizing science we create products that help people live better lives.
+                </Text>
+                </View>
+              </View>
+            </View>
+            <View style={HomeStyle.SacredLifeStyleItem}>
+              <View style={HomeStyle.SacredLifeStyleHeader}>
+                <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/sustainability.jpg')} />
+              </View>
+              <View style={HomeStyle.SacredLifeStyleContent}>
+                <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/sustainability-logo.png')} />
+                <View style={{ flex: 4 }}>
+                  <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Sustainability</Text>
+                  <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
+                    For Sacred Medicine, sustainability means shaping the future with responsibility and commitment with Mother Earth as an integral part of our corporate strategy.
+                </Text>
+                </View>
+              </View>
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>

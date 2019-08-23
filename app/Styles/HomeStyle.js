@@ -21,18 +21,57 @@ const HomeStyle = StyleSheet.create({
     marginHorizontal: 25,
     marginBottom: 20
   },
-  MiddleButtons: {
-    backgroundColor: '#561D6A',
+  SacredLifeStyleLogo: {
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    height: 100,
-    paddingVertical: 10
+    justifyContent: 'center',
+    marginVertical: 30
   },
-  CategoryButtons: {
+  SacredLifeStyleText: {
     marginHorizontal: 25,
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 20
-  }
+    justifyContent: 'center'
+  },
+  SacredLifeStyleItems: {
+    margin: 25,
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  SacredLifeStyleItem: {
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  SacredLifeStyleHeader: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    borderBottomWidth: 5,
+    borderBottomColor: '#BD742C'
+  },
+  SacredLifeStyleHeaderImage: {
+    maxWidth: width * 0.9,
+    maxHeight: 245
+  },
+  SacredLifeStyleContent: {
+    flex: 5,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    height: 150
+  },
+  SacredLifeStyleContentImage: {
+    flex: 1,
+    width: '100%',
+    maxHeight: 100
+  },
+  SacredLifeStyleContentTextTitle: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginLeft: 5
+  },
+  SacredLifeStyleContentTextDescription: {
+    fontWeight: 'normal',
+    fontSize: 15,
+    marginLeft: 5
+  },
 });
 export default HomeStyle;

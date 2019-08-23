@@ -10,7 +10,6 @@ import {
   createAppContainer,
   createBottomTabNavigator,
   createDrawerNavigator,
-  DrawerNavigation,
   DrawerItems,
   createStackNavigator,
   createSwitchNavigator,
@@ -24,10 +23,11 @@ import ResetPassword from '../Screens/Auth/ResetPassword'
 import SignIn from '../Screens/Auth/SignIn'
 
 import Home from '../Screens/App/Home'
-import Alerts from '../Screens/App/Alerts'
+import Subscribe from '../Screens/App/Subscribe'
 import Search from '../Screens/App/Search'
 import Profile from '../Screens/App/Profile'
-import Info from '../Screens/App/Info'
+import About from '../Screens/App/About'
+import Ritual from '../Screens/App/Ritual'
 
 const width = Dimensions.get('screen').width
 
@@ -35,7 +35,6 @@ class DrawerHeaderComponent extends React.Component {
 
   constructor(props) {
     super(props)
-    console.log(props)
   }
 
   render() {
@@ -116,10 +115,10 @@ const AuthStack = createStackNavigator(
 const HomeStack = createStackNavigator(
   {
     Home,
-    Alerts,
+    Subscribe,
     Search,
     Profile,
-    Info
+    Ritual
   },
   {
     headerMode: 'none',
@@ -128,13 +127,13 @@ const HomeStack = createStackNavigator(
   }
 )
 
-// const AlertsStack = createStackNavigator(
+// const SubscribeStack = createStackNavigator(
 //   {
-//     Alerts,
+//     Subscribe,
 //     Home,
 //     Search,
 //     Profile,
-//     Info
+//     About
 //   },
 //   {
 //     headerMode: 'none',
@@ -146,9 +145,9 @@ const HomeStack = createStackNavigator(
 //   {
 //     Search,
 //     Home,
-//     Alerts,
+//     Subscribe,
 //     Profile,
-//     Info
+//     About
 //   },
 //   {
 //     headerMode: 'none',
@@ -160,9 +159,9 @@ const HomeStack = createStackNavigator(
 //   {
 //     Profile,
 //     Home,
-//     Alerts,
+//     Subscribe,
 //     Search,
-//     Info
+//     About
 //   },
 //   {
 //     headerMode: 'none',
@@ -170,11 +169,11 @@ const HomeStack = createStackNavigator(
 //   }
 // )
 
-// const InfoStack = createStackNavigator(
+// const AboutStack = createStackNavigator(
 //   {
-//     Info,
+//     About,
 //     Home,
-//     Alerts,
+//     Subscribe,
 //     Search,
 //     Profile,
 //   },
@@ -186,11 +185,10 @@ const HomeStack = createStackNavigator(
 
 const MainTabs = createBottomTabNavigator(
   {
-    Home: HomeStack,
-    Alerts: Alerts,
-    Search: Search,
-    Profile: Profile,
-    Info: Info
+    Home: Home,
+    Subscribe: Subscribe,
+    Rituals: Ritual,
+    About: About
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -203,23 +201,24 @@ const MainTabs = createBottomTabNavigator(
           case 'Home':
             iconName = 'home'
             break;
-          case 'Alerts':
+          case 'Subscribe':
             iconName = 'bell'
             break;
-          case 'Search':
-            iconName = 'search'
-            break;
-          case 'Profile':
+          case 'Rituals':
             iconName = 'user'
             break;
-          case 'Info':
+          case 'About':
             iconName = 'info'
             break;
           default:
             iconName = ''
             break;
         }
-        return <Icon reverseColor name={iconName} size={routeName === iconName ? 40 : 25} color={tintColor} />
+        if(routeName === 'Rituals') {
+          return <Image style={{ width: 25 }} resizeMode='contain' source={require('../Assets/Images/rituals.png')} />
+        } else {
+          return <Icon reverseColor name={iconName} size={routeName === iconName ? 40 : 25} color={tintColor} />
+        }
       },
     }),
     tabBarOptions: {
@@ -235,16 +234,16 @@ const MainTabs = createBottomTabNavigator(
     },
     headerMode: 'none',
     mode: 'modal',
+    initialRouteName: 'Home'
   }
 )
 
 const MainDrawer = createDrawerNavigator(
   {
     Home: MainTabs,
-    Alerts: MainTabs,
-    Search: MainTabs,
-    Profile: MainTabs,
-    Info: MainTabs,
+    Subscribe: MainTabs,
+    Rituals: MainTabs,
+    About: MainTabs,
   },
   {
     drawerWidth: width,

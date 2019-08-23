@@ -34,6 +34,7 @@ const AuthStyle = StyleSheet.create({
   haveAccountButton: {
     backgroundColor: 'transparent',
     width: '100%',
+    borderColor: 'transparent'
   },
   haveAccountButtonText: {
     alignContent: 'center',
