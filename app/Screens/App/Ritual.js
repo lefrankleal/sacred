@@ -71,7 +71,7 @@ class Ritual extends Component {
             </TouchableOpacity>
           }
           centerContainerStyle={RitualStyle.headerCenterContainer}
-          rightComponent={{ icon: 'menu', color: 'gray' }}
+          rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
         />
         <ScrollView
@@ -101,7 +101,7 @@ class Ritual extends Component {
           </View>
           <View
             style={RitualStyle.ritualsContainer}>
-            {this.state.items && this.state.items.map(
+            {this.state.items && this.state.items.length > 0 && this.state.items.map(
               (v, i) => {
                 return (
                   <View key={i} style={{marginBottom: this.state.items[i].visible === true ? 10 : 0}}>

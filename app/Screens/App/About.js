@@ -34,7 +34,7 @@ class About extends Component {
             </TouchableOpacity>
           }
           centerContainerStyle={AboutStyle.headerCenterContainer}
-          rightComponent={{ icon: 'menu', color: 'gray' }}
+          rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
         />
         <ScrollView
