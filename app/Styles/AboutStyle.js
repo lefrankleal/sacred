@@ -5,7 +5,7 @@ const height = Dimensions.get('screen').height
 
 const AboutStyle = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
   },
   headerContainer: {
     backgroundColor: 'transparent'
@@ -18,25 +18,27 @@ const AboutStyle = StyleSheet.create({
   },
   headContainer: {
     marginHorizontal: width * 0.05,
-    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   headImage: {
-    maxWidth: '70%',
-    borderBottomColor: 'red'
+    width: width * 0.6,
+    maxHeight: width * 0.6,
+    marginVertical: 20
   },
   headTitle: {
     fontSize: 20,
     fontWeight: 'bold'
   },
   headDescription: {
-    fontSize: 15,
-    marginBottom: 30
+    fontSize: 18,
+    marginVertical: 20,
+    textAlign: 'justify',
   },
   bodyContent: {
-    height: 420,
-    marginHorizontal: width * 0.05,
     alignItems: 'center',
+    marginHorizontal: width * 0.05,
+    maxHeight: width * 0.8,
   },
   bodyTitle: {
     fontSize: 30,
@@ -47,13 +49,24 @@ const AboutStyle = StyleSheet.create({
     color: '#BD742C'
   },
   bodyImage: {
-    width: '100%',
+    width: width,
     maxHeight: 300,
     resizeMode: 'contain'
   },
   bodyFooter: {
-    fontSize: 18,
-    color: '#BD742C'
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    alignContent: 'space-around',
+    alignItems: 'center',
+    marginBottom: 20
   },
+  bodyFooterItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: width * 0.5,
+    paddingVertical: 5
+  }
 });
 export default AboutStyle;

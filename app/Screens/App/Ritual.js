@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Feather'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Globals from '../../config/Globals'
 import Youtube from '../../Components/Youtube'
+import { DrawerActions } from 'react-navigation'
 
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
@@ -18,7 +19,6 @@ class Ritual extends Component {
       refreshing: false,
       items: []
     }
-    this._getItems()
   }
 
   static navigationOptions = {
@@ -26,6 +26,7 @@ class Ritual extends Component {
   }
 
   componentDidMount = () => {
+    this._getItems()
   }
 
   _goTo = (view) => {
@@ -53,8 +54,10 @@ class Ritual extends Component {
     )).then((res) => {
       this.setState({ refreshing: false })
       this.setState({ 'items': res.body })
+      console.log(this.state.items)
     }).catch((error) => {
       this.setState({ refreshing: false })
+      console.log(error)
       Alert.alert('Error', 'Something is wrong with your request, please verify you have network connection and be sure you have entered a valid URL')
     })
   }
@@ -124,7 +127,9 @@ class Ritual extends Component {
                     </TouchableOpacity>
                     {this.state.items[i].visible &&
                       <View>
-                        <Text style={RitualStyle.itemDescription}>{v.description}</Text>
+                        {v.description && v.description.length > 0 &&
+                          <Text style={RitualStyle.itemDescription}>{v.description}</Text>
+                        }
                         <Youtube video={v.video.id} />
                       </View>
                     }

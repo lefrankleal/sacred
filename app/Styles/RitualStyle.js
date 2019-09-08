@@ -26,10 +26,12 @@ const RitualStyle = StyleSheet.create({
   },
   introTitle: {
     fontWeight: 'bold',
-    fontSize: 20
+    fontSize: 22,
+    marginBottom: 10
   },
   introDescription: {
-    fontSize: 15
+    fontSize: 18,
+    textAlign: 'justify'
   },
   ritualsContainer: {
     marginHorizontal: width * 0.05,
@@ -38,13 +40,16 @@ const RitualStyle = StyleSheet.create({
   itemButton: {
     backgroundColor: '#BD742C',
     paddingHorizontal: 5,
+    paddingVertical: 5,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   itemName: {
     fontWeight: 'bold',
-    fontSize: 15,
-    color: 'white'
+    fontSize: 18,
+    color: 'white',
+    maxWidth: '90%'
   },
   itemDescription: {
     fontWeight: 'bold',

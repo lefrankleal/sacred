@@ -21,13 +21,21 @@ const HomeStyle = StyleSheet.create({
     marginHorizontal: 25,
     marginBottom: 20
   },
+  introductionText: {
+    fontSize: 18,
+    textAlign: 'justify'
+  },
   SacredLifeStyleLogo: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginVertical: 30
+    marginVertical: 30,
+    textAlign: 'justify',
+    marginVertical: 10
   },
   SacredLifeStyleText: {
     marginHorizontal: 25,
+    fontSize: 18,
+    textAlign: 'justify',
     flexDirection: 'row',
     justifyContent: 'center'
   },
@@ -47,6 +55,7 @@ const HomeStyle = StyleSheet.create({
     borderBottomColor: '#BD742C'
   },
   SacredLifeStyleHeaderImage: {
+    width: width * 0.9,
     maxWidth: width * 0.9,
     maxHeight: 245
   },
@@ -61,7 +70,8 @@ const HomeStyle = StyleSheet.create({
   SacredLifeStyleContentImage: {
     flex: 1,
     width: '100%',
-    maxHeight: 100
+    maxHeight: 100,
+    resizeMode: 'cover'
   },
   SacredLifeStyleContentTextTitle: {
     fontWeight: 'bold',

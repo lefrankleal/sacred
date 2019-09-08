@@ -62,12 +62,12 @@ class Auth extends Component {
           <Image style={ AuthStyle.topBlockImage } resizeMode='contain' source={require('../../Assets/Images/logo-text-vertical.png')} />
         </View>
         <View style={AuthStyle.bottomBlock}>
-          <Button
+          {/* <Button
             title='REGISTER'
             buttonStyle={AuthStyle.registerButton}
             titleStyle={AuthStyle.registerButtonText}
             onPress={() => this._fbLogin()}
-          />
+          /> */}
           <Button
             title='Continue without account >>'
             buttonStyle={AuthStyle.haveAccountButton}

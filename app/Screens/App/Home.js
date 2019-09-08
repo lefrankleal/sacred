@@ -3,7 +3,8 @@ import { Dimensions, RefreshControl, Image, ScrollView, View, SafeAreaView } fro
 import { Header, Text } from 'react-native-elements'
 import HomeStyle from '../../Styles/HomeStyle'
 import Youtube from '../../Components/Youtube'
-import { DrawerActions } from 'react-navigation';
+import { DrawerActions } from 'react-navigation'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
@@ -43,7 +44,7 @@ class Home extends Component {
           }>
           <View style={HomeStyle.Introduction}>
             <Youtube video='uQaQVSRak4E' />
-            <Text>
+            <Text style={HomeStyle.introductionText}>
               Since the dawn of time, nature has generously provided us with an abundance of all we need to heal our body and soul,
               both physically and spiritually, such as the miraculous cannabis plant.
                 {'\n\n'}
@@ -53,13 +54,13 @@ class Home extends Component {
           <View style={HomeStyle.SacredLifeStyleLogo}>
             <Image style={{ height: 80, width: width * 0.8 }} resizeMode='contain' source={require('../../Assets/Images/sacred-lifestyle-logo.png')} />
           </View>
-          <View style={HomeStyle.SacredLifeStyleText}>
-            <Text>It’s time to start using our intuition and take control of our being while working towards more important and transcendent goals. The time has come to return to Mother Earth all that she gives us in abundance by beginning to practice a SACRED lifestyle that allows us to live in peace and harmony with a joyful outlook that frees your spirit and drives your creativity towards a true spiritual awakening!</Text>
+          <View>
+            <Text style={HomeStyle.SacredLifeStyleText}>It’s time to start using our intuition and take control of our being while working towards more important and transcendent goals. The time has come to return to Mother Earth all that she gives us in abundance by beginning to practice a SACRED lifestyle that allows us to live in peace and harmony with a joyful outlook that frees your spirit and drives your creativity towards a true spiritual awakening!</Text>
           </View>
           <View style={HomeStyle.SacredLifeStyleItems}>
-            <View style={HomeStyle.SacredLifeStyleItem}>
+            <TouchableOpacity style={HomeStyle.SacredLifeStyleItem}>
               <View style={HomeStyle.SacredLifeStyleHeader}>
-                <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/innovation.jpg')} />
+                <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/innovation.jpg')} />
               </View>
               <View style={HomeStyle.SacredLifeStyleContent}>
                 <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/innovation-logo.png')} />
@@ -70,8 +71,8 @@ class Home extends Component {
                   </Text>
                 </View>
               </View>
-            </View>
-            <View style={HomeStyle.SacredLifeStyleItem}>
+            </TouchableOpacity>
+            <TouchableOpacity style={HomeStyle.SacredLifeStyleItem} onPress={() => this._goTo('About')}>
               <View style={HomeStyle.SacredLifeStyleHeader}>
                 <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/products.jpg')} />
               </View>
@@ -84,8 +85,8 @@ class Home extends Component {
                 </Text>
                 </View>
               </View>
-            </View>
-            <View style={HomeStyle.SacredLifeStyleItem}>
+            </TouchableOpacity>
+            <TouchableOpacity style={HomeStyle.SacredLifeStyleItem}>
               <View style={HomeStyle.SacredLifeStyleHeader}>
                 <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/sustainability.jpg')} />
               </View>
@@ -98,7 +99,7 @@ class Home extends Component {
                 </Text>
                 </View>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </SafeAreaView>

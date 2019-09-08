@@ -4,6 +4,7 @@ import { Button, Header, Text, Input, ThemeProvider } from 'react-native-element
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import SubscribeStyle from '../../Styles/SubscribeStyle'
 import Globals from '../../config/Globals'
+import { DrawerActions } from 'react-navigation'
 
 class Subscribe extends Component {
 

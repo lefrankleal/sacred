@@ -3,6 +3,8 @@ import { FlatList, RefreshControl, Image, ScrollView, View } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import AboutStyle from '../../Styles/AboutStyle'
+import { DrawerActions } from 'react-navigation'
+import Icon from 'react-native-vector-icons/Feather'
 
 class About extends Component {
 
@@ -10,16 +12,51 @@ class About extends Component {
     super(props);
     this.state = {
       refreshing: false,
-      video: '',
-      playerVisible: false
+      vapeIcons: {
+        freedom: require(`../../Assets/Images/vape-vector-freedom.png`),
+        vision: require(`../../Assets/Images/vape-vector-vision.png`),
+        radiant: require(`../../Assets/Images/vape-vector-radiant.png`),
+        intuition: require(`../../Assets/Images/vape-vector-intuition.png`),
+        passion: require(`../../Assets/Images/vape-vector-passion.png`),
+        healing: require(`../../Assets/Images/vape-vector-healing.png`)
+      },
+      vapes: []
     }
   }
 
   componentDidMount = () => {
+    this.loadVapes()
   }
 
-  _goTo = (view) => {
-    this.props.navigation.navigate(view)
+  loadVapes = () => {
+    this.setState({ refreshing: true })
+    fetch(Globals.SEVER_API_URL + '/information', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json().then(
+      json => ({
+        url: res.url,
+        headers: res.headers.map,
+        status: {
+          status: res.status,
+          statusText: res.statusText || ''
+        },
+        body: json
+      })
+    )).then((res) => {
+      this.setState({ refreshing: false })
+      this.setState({ 'vapes': res.body })
+    }).catch((error) => {
+      this.setState({ refreshing: false })
+      Alert.alert('Error', 'Something is wrong with your request, please verify you have network connection and be sure you have entered a valid URL')
+    })
+  }
+
+  _goTo = (view, item = {}) => {
+    this.props.navigation.navigate(view, {...item})
   }
 
   render() {
@@ -59,8 +96,19 @@ class About extends Component {
               <Text style={AboutStyle.bodyTitle}>VAPE</Text>
               <Text style={AboutStyle.bodySubtitle}>Luxurious All Natural Cannabis Oil</Text>
               <Image style={AboutStyle.bodyImage} source={require('../../Assets/Images/vape-line.jpg')} />
-              <Text style={AboutStyle.bodyFooter}>Freedom | Vision | Radiant</Text>
-              <Text style={AboutStyle.bodyFooter}>Intuition | Passion | Healing</Text>
+            </View>
+            <View style={AboutStyle.bodyFooter}>
+              {this.state.vapes && this.state.vapes.map(
+                (item, i) => {
+                  return (
+                    <TouchableOpacity key={i} style={AboutStyle.bodyFooterItem} onPress={() => this._goTo('Vape', item)}>
+                      <Image style={{ width: 40, height: 40 }} resizeMode='contain' source={this.state.vapeIcons[item.title.split(" ")[0].toLowerCase()]} />
+                      <Text style={{color: item.color, fontSize: 20, fontWeight: 'bold'}}>{item.title.split(" ")[0]}</Text>
+                      <Icon name="chevron-right" color={item.color} size={20}/>
+                    </TouchableOpacity>
+                  )
+                })
+              }
             </View>
         </ScrollView>
       </View>

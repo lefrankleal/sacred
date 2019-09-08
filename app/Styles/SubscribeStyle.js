@@ -27,11 +27,12 @@ const SubscribeStyle = StyleSheet.create({
     maxHeight: 150,
   },
   title: {
-    fontSize: 20
+    fontSize: 22
   },
   description: {
     width: width * 0.9,
-    fontSize: 15
+    fontSize: 18,
+    textAlign: 'justify'
   },
   emailInputContainer: {
     width: width * 0.9

@@ -27,6 +27,7 @@ import Subscribe from '../Screens/App/Subscribe'
 import Search from '../Screens/App/Search'
 import Profile from '../Screens/App/Profile'
 import About from '../Screens/App/About'
+import Vape from '../Screens/App/Vape'
 import Ritual from '../Screens/App/Ritual'
 
 const width = Dimensions.get('screen').width
@@ -127,68 +128,24 @@ const HomeStack = createStackNavigator(
   }
 )
 
-// const SubscribeStack = createStackNavigator(
-//   {
-//     Subscribe,
-//     Home,
-//     Search,
-//     Profile,
-//     About
-//   },
-//   {
-//     headerMode: 'none',
-//     mode: 'modal',
-//   }
-// )
-
-// const SearchStack = createStackNavigator(
-//   {
-//     Search,
-//     Home,
-//     Subscribe,
-//     Profile,
-//     About
-//   },
-//   {
-//     headerMode: 'none',
-//     mode: 'modal',
-//   }
-// )
-
-// const ProfileStack = createStackNavigator(
-//   {
-//     Profile,
-//     Home,
-//     Subscribe,
-//     Search,
-//     About
-//   },
-//   {
-//     headerMode: 'none',
-//     mode: 'modal',
-//   }
-// )
-
-// const AboutStack = createStackNavigator(
-//   {
-//     About,
-//     Home,
-//     Subscribe,
-//     Search,
-//     Profile,
-//   },
-//   {
-//     headerMode: 'none',
-//     mode: 'modal',
-//   }
-// )
+const AboutStack = createStackNavigator(
+  {
+    About,
+    Vape
+  },
+  {
+    headerMode: 'none',
+    mode: 'modal',
+    initialRouteName: 'About'
+  }
+)
 
 const MainTabs = createBottomTabNavigator(
   {
     Home: Home,
     Subscribe: Subscribe,
     Rituals: Ritual,
-    About: About
+    About: AboutStack
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -203,9 +160,6 @@ const MainTabs = createBottomTabNavigator(
             break;
           case 'Subscribe':
             iconName = 'bell'
-            break;
-          case 'Rituals':
-            iconName = 'user'
             break;
           case 'About':
             iconName = 'info'
