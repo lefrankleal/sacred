@@ -5,7 +5,7 @@
  * Example doesn't meet the requirements
  */
 import React from 'react'
-import { Dimensions, Image, Text, View } from "react-native";
+import { Dimensions, Image, Linking, Text, View } from "react-native";
 import {
   createAppContainer,
   createBottomTabNavigator,
@@ -41,9 +41,9 @@ class DrawerHeaderComponent extends React.Component {
   render() {
     return (
       <View style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center'
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
       }}>
         <View style={{
           flex: 3,
@@ -54,13 +54,11 @@ class DrawerHeaderComponent extends React.Component {
           width: width
         }}>
           <Icon reverseColor name={'x'} size={50} color={'white'} style={{ position: 'absolute', right: 10, top: 10 }} onPress={() => this.props.navigation.toggleDrawer()} />
-          <Image resizeMode='contain' style={{width: width * 0.5}} source={require('../Assets/Images/isotipo-white.png')} />
+          <Image resizeMode='contain' style={{ width: width * 0.5 }} source={require('../Assets/Images/isotipo-white.png')} />
         </View>
         <DrawerItems {...this.props} style={{ flex: 3 }} />
         <View style={{ flex: 3, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-          <Icon name={'instagram'} size={45} color={'white'} />
-          <Icon name={'facebook'} size={45} color={'white'} />
-          <Icon name={'youtube'} size={45} color={'white'} />
+          <Icon name={'youtube'} size={45} color={'white'} onPress={() => Linking.openURL('https://www.youtube.com/channel/UCG4rjFwbkrcxa_HSuKkgxjQ')} />
         </View>
       </View>
     )
@@ -116,10 +114,6 @@ const AuthStack = createStackNavigator(
 const HomeStack = createStackNavigator(
   {
     Home,
-    Subscribe,
-    Search,
-    Profile,
-    Ritual
   },
   {
     headerMode: 'none',
@@ -151,8 +145,6 @@ const MainTabs = createBottomTabNavigator(
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
-        console.log(routeName, focused)
-
         let iconName;
         switch (routeName) {
           case 'Home':
@@ -168,8 +160,8 @@ const MainTabs = createBottomTabNavigator(
             iconName = ''
             break;
         }
-        if(routeName === 'Rituals') {
-          return <Image style={{ width: 25 }} resizeMode='contain' source={require('../Assets/Images/rituals.png')} />
+        if (routeName === 'Rituals') {
+          return <Image style={{ width: routeName === iconName ? 40 : 25 }} resizeMode='contain' source={require('../Assets/Images/rituals.png')} />
         } else {
           return <Icon reverseColor name={iconName} size={routeName === iconName ? 40 : 25} color={tintColor} />
         }
@@ -188,7 +180,6 @@ const MainTabs = createBottomTabNavigator(
     },
     headerMode: 'none',
     mode: 'modal',
-    initialRouteName: 'Home'
   }
 )
 
@@ -200,12 +191,13 @@ const MainDrawer = createDrawerNavigator(
     About: MainTabs,
   },
   {
+    initialRouteName: 'Home',
     drawerWidth: width,
     drawerPosition: 'right',
     drawerBackgroundColor: 'black',
     contentComponent: DrawerHeaderComponent,
     contentOptions: {
-      activeItemKey: ({navigation}) => {
+      activeItemKey: ({ navigation }) => {
         console.log(navigation)
       },
       labelStyle: {
