@@ -18,7 +18,8 @@ const VapeStyle = StyleSheet.create({
     width: 150
   },
   bodyContainer: {
-    paddingHorizontal: 35,
+    padding: 35,
+    width: width
   },
   mainImage: {
     width: width * 0.7,
@@ -41,7 +42,7 @@ const VapeStyle = StyleSheet.create({
   description: {
     fontSize: 21,
     fontWeight: 'bold',
-    textAlign: 'justify'
+    textAlign: 'justify',
   }
 });
 export default VapeStyle;

@@ -50,15 +50,13 @@ class Vape extends Component {
           rightComponent={{ icon: 'menu', color: 'gray' }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('back') }}
         />
-        <ScrollView>
-          <View style={VapeStyle.bodyContainer} >
-            <Image style={VapeStyle.mainImage} source={this.state.vapeImages[item.title.split(" ")[0].toLowerCase()]} />
-            <Text style={[VapeStyle.mainTitle, {color: item.color}]}>{item.title}</Text>
-            <Text style={VapeStyle.mainSubTitle}>{item.small_subtitle}</Text>
-            <Text style={[VapeStyle.subTitle, {color: item.color}]}>{item.subtitle}</Text>
-            <Text style={VapeStyle.description}>{item.description}</Text>
-          </View>
-        </ScrollView>
+        <View style={VapeStyle.bodyContainer} >
+          <Image style={VapeStyle.mainImage} source={this.state.vapeImages[item.title.split(" ")[0].toLowerCase()]} />
+          <Text style={[VapeStyle.mainTitle, {color: item.color}]}>{item.title}</Text>
+          <Text style={VapeStyle.mainSubTitle}>{item.small_subtitle}</Text>
+          <Text style={[VapeStyle.subTitle, {color: item.color}]}>{item.subtitle}</Text>
+          <Text style={VapeStyle.description}>{item.description}</Text>
+        </View>
       </SafeAreaView>
     )
   }

@@ -21,9 +21,16 @@ const HomeStyle = StyleSheet.create({
     marginHorizontal: 25,
     marginBottom: 20
   },
+  introductionTitleText: {
+    fontSize: 30,
+    textAlign: 'center',
+    marginTop: 15,
+    fontWeight: 'bold'
+  },
   introductionText: {
     fontSize: 18,
-    textAlign: 'justify'
+    textAlign: 'justify',
+    marginTop: 15
   },
   SacredLifeStyleLogo: {
     flexDirection: 'row',
@@ -34,6 +41,7 @@ const HomeStyle = StyleSheet.create({
   },
   SacredLifeStyleText: {
     marginHorizontal: 25,
+    marginTop: 15,
     fontSize: 18,
     textAlign: 'justify',
     flexDirection: 'row',

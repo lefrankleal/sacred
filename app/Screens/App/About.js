@@ -72,7 +72,7 @@ class About extends Component {
           }
           centerContainerStyle={AboutStyle.headerCenterContainer}
           rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
-          leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
+          // leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
         />
         <ScrollView
           refreshControl={
@@ -86,9 +86,9 @@ class About extends Component {
               <Text style={AboutStyle.headTitle}>Purify, restore and deliver equilibrium to the body, mind and soul.</Text>
               <Text style={AboutStyle.headDescription}>
                 When cannabis is organic and used with the intention and respect it deserves, it activates the pineal gland and the third eye or intuition, leading us towards our spiritual evolution.
-                {'\n'}
+                {'\n\n'}
                 Throughout this process, the intention with which you use this plant will be fundamental to your growth, progress, and evolution, enhancing all your senses and allowing your intuition to guide you instead of everything else around you.
-                {'\n'}
+                {'\n\n'}
                 Discover a new way to achieve mental clarity, harmony, and to awaken your potential to reconnect with yourself through each product offered by Sacred Medicine!
               </Text>
             </View>

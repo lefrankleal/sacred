@@ -37,23 +37,24 @@ const RitualStyle = StyleSheet.create({
     marginHorizontal: width * 0.05,
     marginVertical: 30
   },
-  itemButton: {
-    backgroundColor: '#BD742C',
-    paddingHorizontal: 5,
+  itemContainer: {
+    marginVertical: 30
+  },
+  itemCategory: {
+    fontWeight: 'bold',
+    fontSize: 28,
     paddingVertical: 5,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    textAlign: 'center'
   },
   itemName: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    color: 'white',
-    maxWidth: '90%'
+    fontSize: 20,
+    color: '#c88a3d',
+    paddingVertical: 5,
+    textAlign: 'center'
   },
   itemDescription: {
     fontWeight: 'bold',
-    fontSize: 12,
+    fontSize: 14,
     padding: 15
   },
 });

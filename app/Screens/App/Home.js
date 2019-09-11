@@ -33,7 +33,7 @@ class Home extends Component {
           centerComponent={<Image style={HomeStyle.headerImage} resizeMode='contain' source={require('../../Assets/Images/logo-text-horizontal.png')} />}
           centerContainerStyle={HomeStyle.headerCenterContainer}
           rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
-          leftComponent={{ icon: 'arrow-back', color: 'transparent' }}
+          // leftComponent={{ icon: 'arrow-back', color: 'transparent' }}
         />
         <ScrollView
           refreshControl={
@@ -44,18 +44,22 @@ class Home extends Component {
           }>
           <View style={HomeStyle.Introduction}>
             <Youtube video='uQaQVSRak4E' />
+            <Text style={HomeStyle.introductionTitleText}>
+              A Gift From Mother Earth
+            </Text>
             <Text style={HomeStyle.introductionText}>
-              Since the dawn of time, nature has generously provided us with an abundance of all we need to heal our body and soul,
-              both physically and spiritually, such as the miraculous cannabis plant.
-                {'\n\n'}
-              That is why at Astral Med, we turn cannabis into
-              </Text>
+              Sacred Medicine is A Gift from Mother Earth with an objective to purify, restore and balance the body, mind and soul through the respect and understanding of its very essence, adequate rituals for its proper use and function throughout all of its forms and nuances.
+            </Text>
           </View>
           <View style={HomeStyle.SacredLifeStyleLogo}>
             <Image style={{ height: 80, width: width * 0.8 }} resizeMode='contain' source={require('../../Assets/Images/sacred-lifestyle-logo.png')} />
           </View>
           <View>
-            <Text style={HomeStyle.SacredLifeStyleText}>It’s time to start using our intuition and take control of our being while working towards more important and transcendent goals. The time has come to return to Mother Earth all that she gives us in abundance by beginning to practice a SACRED lifestyle that allows us to live in peace and harmony with a joyful outlook that frees your spirit and drives your creativity towards a true spiritual awakening!</Text>
+            <Text style={HomeStyle.SacredLifeStyleText}>
+              It’s time to start using our intuition and take control of our being while working towards more important and transcendent goals.
+              {'\n\n'}
+              The time has come to return to Mother Earth all that she gives us in abundance by beginning to practice a SACRED lifestyle that allows us to live in peace and harmony with a joyful outlook that frees your spirit and drives your creativity towards a true spiritual awakening!
+            </Text>
           </View>
           <View style={HomeStyle.SacredLifeStyleItems}>
             <TouchableOpacity style={HomeStyle.SacredLifeStyleItem}>
@@ -78,7 +82,7 @@ class Home extends Component {
               </View>
               <View style={HomeStyle.SacredLifeStyleContent}>
                 <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/products-logo.png')} />
-                <View style={{ flex: 4 }}>
+                <View style={{ flex: 4, marginVertical: 10 }}>
                   <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Products</Text>
                   <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
                     We are committed to work everyday setting forth our knowledge and industry’s best practices to our customers. By utilizing science we create products that help people live better lives.

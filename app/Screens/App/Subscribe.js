@@ -72,7 +72,7 @@ class Subscribe extends Component {
             }
             centerContainerStyle={SubscribeStyle.headerCenterContainer}
             rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
-            leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
+            // leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('Home') }}
           />
           <ScrollView
             refreshControl={

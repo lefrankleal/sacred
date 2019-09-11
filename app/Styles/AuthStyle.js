@@ -6,7 +6,7 @@ const height = Dimensions.get('screen').height
 const AuthStyle = StyleSheet.create({
   topBlock: {
     alignItems: 'center',
-    top: height * 0.08,
+    // top: height * 0.08,
     height: height * 0.4
   },
   topBlockImage: {

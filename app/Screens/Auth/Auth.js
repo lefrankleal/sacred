@@ -10,6 +10,9 @@ class Auth extends Component {
 
   constructor(props) {
     super(props);
+    setTimeout(() => {
+      this._goToHome()
+    }, 1000)
   }
 
   _checkLogin = () => {
@@ -57,30 +60,30 @@ class Auth extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignContent: 'center' }}>
         <View style={AuthStyle.topBlock}>
           <Image style={ AuthStyle.topBlockImage } resizeMode='contain' source={require('../../Assets/Images/logo-text-vertical.png')} />
         </View>
-        <View style={AuthStyle.bottomBlock}>
+        {/* <View style={AuthStyle.bottomBlock}> */}
           {/* <Button
             title='REGISTER'
             buttonStyle={AuthStyle.registerButton}
             titleStyle={AuthStyle.registerButtonText}
             onPress={() => this._fbLogin()}
           /> */}
-          <Button
+          {/* <Button
             title='Continue without account >>'
             buttonStyle={AuthStyle.haveAccountButton}
             titleStyle={AuthStyle.haveAccountButtonText}
             onPress={this._goToHome}
-          />
+          /> */}
           {/* <Button
             title='Already have an account >>'
             buttonStyle={AuthStyle.haveAccountButton}
             titleStyle={AuthStyle.haveAccountButtonText}
             onPress={this._goToHome}
           /> */}
-        </View>
+        {/* </View> */}
       </View>
     )
   }

@@ -59,7 +59,7 @@ const AboutStyle = StyleSheet.create({
     justifyContent: 'space-around',
     alignContent: 'space-around',
     alignItems: 'center',
-    marginBottom: 20
+    marginBottom: 30
   },
   bodyFooterItem: {
     flexDirection: 'row',
