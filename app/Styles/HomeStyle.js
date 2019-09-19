@@ -73,13 +73,13 @@ const HomeStyle = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    height: 150
+    height: 180
   },
   SacredLifeStyleContentImage: {
     flex: 1,
     width: '100%',
     maxHeight: 100,
-    resizeMode: 'cover'
+    resizeMode: 'cover',
   },
   SacredLifeStyleContentTextTitle: {
     fontWeight: 'bold',

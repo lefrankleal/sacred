@@ -3,6 +3,7 @@ import { Dimensions, Image, ScrollView, View, SafeAreaView } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import VapeStyle from '../../Styles/VapeStyle'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { DrawerActions } from 'react-navigation'
 
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
@@ -47,16 +48,16 @@ class Vape extends Component {
             </TouchableOpacity>
           }
           centerContainerStyle={VapeStyle.headerCenterContainer}
-          rightComponent={{ icon: 'menu', color: 'gray' }}
+          rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('back') }}
         />
-        <View style={VapeStyle.bodyContainer} >
+        <ScrollView contentContainerStyle={VapeStyle.bodyContainer} >
           <Image style={VapeStyle.mainImage} source={this.state.vapeImages[item.title.split(" ")[0].toLowerCase()]} />
           <Text style={[VapeStyle.mainTitle, {color: item.color}]}>{item.title}</Text>
           <Text style={VapeStyle.mainSubTitle}>{item.small_subtitle}</Text>
           <Text style={[VapeStyle.subTitle, {color: item.color}]}>{item.subtitle}</Text>
           <Text style={VapeStyle.description}>{item.description}</Text>
-        </View>
+        </ScrollView>
       </SafeAreaView>
     )
   }

@@ -5,8 +5,7 @@ const height = Dimensions.get('screen').height
 
 const VapeStyle = StyleSheet.create({
   container: {
-    height: '100%',
-    flex: 1
+    flex: 1,
   },
   headerContainer: {
     backgroundColor: 'transparent'
@@ -19,7 +18,8 @@ const VapeStyle = StyleSheet.create({
   },
   bodyContainer: {
     padding: 35,
-    width: width
+    width: width,
+    flex: 1
   },
   mainImage: {
     width: width * 0.7,

@@ -46,7 +46,7 @@ class Subscribe extends Component {
       if (res.body.status === true) {
         Alert.alert('Success', 'Great, you have been subscribed to our newsletter.')
       } else {
-        Alert.alert('Error', 'Something is wrong with the server please try again later.')
+        Alert.alert('Error', 'Are you already subscribed to our newsletter?, otherwise please try again later.')
       }
     }).catch((error) => {
       this.setState({ refreshing: false })

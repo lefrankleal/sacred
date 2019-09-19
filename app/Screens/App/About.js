@@ -96,19 +96,19 @@ class About extends Component {
               <Text style={AboutStyle.bodyTitle}>VAPE</Text>
               <Text style={AboutStyle.bodySubtitle}>Luxurious All Natural Cannabis Oil</Text>
               <Image style={AboutStyle.bodyImage} source={require('../../Assets/Images/vape-line.jpg')} />
-            </View>
-            <View style={AboutStyle.bodyFooter}>
-              {this.state.vapes && this.state.vapes.map(
-                (item, i) => {
-                  return (
-                    <TouchableOpacity key={i} style={AboutStyle.bodyFooterItem} onPress={() => this._goTo('Vape', item)}>
-                      <Image style={{ width: 40, height: 40 }} resizeMode='contain' source={this.state.vapeIcons[item.title.split(" ")[0].toLowerCase()]} />
-                      <Text style={{color: item.color, fontSize: 20, fontWeight: 'bold'}}>{item.title.split(" ")[0]}</Text>
-                      <Icon name="chevron-right" color={item.color} size={20}/>
-                    </TouchableOpacity>
-                  )
-                })
-              }
+              <View style={AboutStyle.bodyFooter}>
+                {this.state.vapes && this.state.vapes.map(
+                  (item, i) => {
+                    return (
+                      <TouchableOpacity key={i} style={AboutStyle.bodyFooterItem} onPress={() => this._goTo('Vape', item)}>
+                        <Image style={{ width: 40, height: 40 }} resizeMode='contain' source={this.state.vapeIcons[item.title.split(" ")[0].toLowerCase()]} />
+                        <Text style={{color: item.color, fontSize: 20, fontWeight: 'bold'}}>{item.title.split(" ")[0]}</Text>
+                        <Icon name="chevron-right" color={item.color} size={20}/>
+                      </TouchableOpacity>
+                    )
+                  })
+                }
+              </View>
             </View>
         </ScrollView>
       </View>

@@ -33,7 +33,7 @@ class Home extends Component {
           centerComponent={<Image style={HomeStyle.headerImage} resizeMode='contain' source={require('../../Assets/Images/logo-text-horizontal.png')} />}
           centerContainerStyle={HomeStyle.headerCenterContainer}
           rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
-          // leftComponent={{ icon: 'arrow-back', color: 'transparent' }}
+        // leftComponent={{ icon: 'arrow-back', color: 'transparent' }}
         />
         <ScrollView
           refreshControl={
@@ -78,7 +78,7 @@ class Home extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={HomeStyle.SacredLifeStyleItem} onPress={() => this._goTo('About')}>
               <View style={HomeStyle.SacredLifeStyleHeader}>
-                <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/products.jpg')} />
+                <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/products.jpg')} />
               </View>
               <View style={HomeStyle.SacredLifeStyleContent}>
                 <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/products-logo.png')} />
@@ -92,7 +92,7 @@ class Home extends Component {
             </TouchableOpacity>
             <TouchableOpacity style={HomeStyle.SacredLifeStyleItem}>
               <View style={HomeStyle.SacredLifeStyleHeader}>
-                <Image style={HomeStyle.SacredLifeStyleHeaderImage} resizeMode='contain' source={require('../../Assets/Images/sustainability.jpg')} />
+                <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/sustainability.jpg')} />
               </View>
               <View style={HomeStyle.SacredLifeStyleContent}>
                 <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/sustainability-logo.png')} />
