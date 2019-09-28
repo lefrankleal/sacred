@@ -15,12 +15,10 @@ class Home extends Component {
     super(props);
     this.state = {
       refreshing: false,
-      playerVisible: false
     }
   }
 
   _goTo = (view) => {
-    console.log(view)
     this.props.navigation.navigate(view)
   }
 
