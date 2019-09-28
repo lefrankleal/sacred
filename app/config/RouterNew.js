@@ -11,9 +11,10 @@ import {
   createBottomTabNavigator,
   createDrawerNavigator,
   DrawerItems,
+  NavigationActions,
   createStackNavigator,
   createSwitchNavigator,
-} from 'react-navigation';
+} from 'react-navigation'
 import Icon from 'react-native-vector-icons/Feather'
 
 import Auth from '../Screens/Auth/Auth'
@@ -38,6 +39,13 @@ class DrawerHeaderComponent extends React.Component {
     super(props)
   }
 
+  navigateToScreen = (route) => {
+    const navigateAction = NavigationActions.navigate({
+      routeName: route.route.key
+    });
+    this.props.navigation.dispatch(navigateAction);
+  }
+
   render() {
     return (
       <View style={{
@@ -56,7 +64,7 @@ class DrawerHeaderComponent extends React.Component {
           <Icon reverseColor name={'x'} size={50} color={'white'} style={{ position: 'absolute', right: 10, top: 10 }} onPress={() => this.props.navigation.toggleDrawer()} />
           <Image resizeMode='contain' style={{ width: width * 0.5 }} source={require('../Assets/Images/isotipo-white.png')} />
         </View>
-        <DrawerItems {...this.props} style={{ flex: 3 }} />
+        <DrawerItems {...this.props} style={{ flex: 3 }} onItemPress={this.navigateToScreen}/>
         <View style={{ flex: 3, flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
           <Icon name={'youtube'} size={45} color={'white'} onPress={() => Linking.openURL('https://www.youtube.com/channel/UCG4rjFwbkrcxa_HSuKkgxjQ')} />
         </View>
@@ -116,9 +124,9 @@ const HomeStack = createStackNavigator(
     Home,
   },
   {
+    initialRouteName: 'Home',
     headerMode: 'none',
     mode: 'modal',
-    initialRouteName: 'Home'
   }
 )
 
@@ -191,7 +199,6 @@ const MainDrawer = createDrawerNavigator(
     About: MainTabs,
   },
   {
-    initialRouteName: 'Home',
     drawerWidth: width,
     drawerPosition: 'right',
     drawerBackgroundColor: 'black',
