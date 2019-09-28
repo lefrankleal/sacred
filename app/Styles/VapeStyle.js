@@ -17,13 +17,12 @@ const VapeStyle = StyleSheet.create({
     width: 150
   },
   bodyContainer: {
-    padding: 35,
-    width: width,
-    flex: 1
+    paddingHorizontal: 35,
+    paddingBottom: 100,
   },
   mainImage: {
     width: width * 0.7,
-    maxHeight: width * 0.7,
+    height: width * 0.7,
     resizeMode: 'contain',
     alignSelf: 'center'
   },

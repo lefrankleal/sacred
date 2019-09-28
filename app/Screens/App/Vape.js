@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { Dimensions, Image, ScrollView, View, SafeAreaView } from 'react-native'
+import { Dimensions, Image, FlatList, ScrollView, View, SafeAreaView } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import VapeStyle from '../../Styles/VapeStyle'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { DrawerActions } from 'react-navigation'
 
-const width = Dimensions.get('screen').width
-const height = Dimensions.get('screen').height
+const { width, height } = Dimensions.get('screen')
 
 class Vape extends Component {
 
@@ -24,9 +23,6 @@ class Vape extends Component {
     }
   }
 
-  componentDidMount = () => {
-  }
-
   _goTo = (view) => {
     if(view === 'back') {
       this.props.navigation.goBack()
@@ -38,7 +34,7 @@ class Vape extends Component {
   render() {
     let item = this.props.navigation.state.params
     return (
-      <SafeAreaView style={VapeStyle.container}>
+      <SafeAreaView>
         <Header
           containerStyle={VapeStyle.headerContainer}
           placement="left"
@@ -51,7 +47,7 @@ class Vape extends Component {
           rightComponent={{ icon: 'menu', color: 'gray', onPress: () => this.props.navigation.dispatch(DrawerActions.toggleDrawer()) }}
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('back') }}
         />
-        <ScrollView contentContainerStyle={VapeStyle.bodyContainer} >
+        <ScrollView contentContainerStyle={VapeStyle.bodyContainer}>
           <Image style={VapeStyle.mainImage} source={this.state.vapeImages[item.title.split(" ")[0].toLowerCase()]} />
           <Text style={[VapeStyle.mainTitle, {color: item.color}]}>{item.title}</Text>
           <Text style={VapeStyle.mainSubTitle}>{item.small_subtitle}</Text>
