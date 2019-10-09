@@ -1,13 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+pod 'XCDYouTubeKit', '~> 2.8'
+
 target 'sacred' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for sacred
 
-  pod 'XCDYouTubeKit', '~> 2.8'
 
   target 'sacredTests' do
     inherit! :search_paths

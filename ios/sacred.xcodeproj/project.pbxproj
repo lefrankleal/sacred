@@ -50,12 +50,12 @@
 		653B78CB4A2C4E339603A91C /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CACCCF677C4B64887988B6 /* libRNSVG.a */; };
 		6AE2EB34C4EA42458F7FE96C /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFD18F108F784685B741B8CE /* MaterialIcons.ttf */; };
 		74C0803AB3344CE496314278 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE73858A824FDC828840E4 /* libRNVectorIcons.a */; };
+		78589157234EA16A00245672 /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78589156234EA16A00245672 /* XCDYouTubeKit.framework */; };
 		7E1E795343D6477EA3D6CCD2 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E72EA3AB5CD049EF90053439 /* libRNSVG-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8B7A5755D15C441C86B69944 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D799D3D8F420411BB949A524 /* Ionicons.ttf */; };
 		8D174633BF264DB08AE7FB2E /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40D1DF5234554FC28233C425 /* AntDesign.ttf */; };
 		98B67157E0804C5BA8722231 /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5F83A8823E452CA1BF4F37 /* libRCTYouTube.a */; };
-		A91DFE062CEFDA3B6E5124D2 /* Pods_sacred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8261B513276627C7ADA658 /* Pods_sacred.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B0826310305F4DF89435163F /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A18B8D58F24B95BC1F9E4E /* Zocial.ttf */; };
 		BA09894BBD304DE9B7913179 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F18B2D3B88A471199CD08CC /* SimpleLineIcons.ttf */; };
@@ -445,6 +445,9 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		683BC75498924CDAA8AEAE84 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		6B10476A0FA3470AA07B3A21 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		785890FE234E8F4C00245672 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78589113234E99FD00245672 /* XCDYouTubeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeKit.h; path = Pods/XCDYouTubeKit/XCDYouTubeKit/XCDYouTubeKit.h; sourceTree = "<group>"; };
+		78589156234EA16A00245672 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7AA892D4A3AC4BEDBD6FC25E /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		7AF9B655FC004B8D941D0A35 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -504,7 +507,7 @@
 				653B78CB4A2C4E339603A91C /* libRNSVG.a in Frameworks */,
 				74C0803AB3344CE496314278 /* libRNVectorIcons.a in Frameworks */,
 				98B67157E0804C5BA8722231 /* libRCTYouTube.a in Frameworks */,
-				A91DFE062CEFDA3B6E5124D2 /* Pods_sacred.framework in Frameworks */,
+				78589157234EA16A00245672 /* XCDYouTubeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +662,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78589156234EA16A00245672 /* XCDYouTubeKit.framework */,
+				78589113234E99FD00245672 /* XCDYouTubeKit.h */,
+				785890FE234E8F4C00245672 /* XCDYouTubeKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,

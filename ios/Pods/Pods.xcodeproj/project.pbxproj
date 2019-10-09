@@ -76,7 +76,7 @@
 		076479D7E7D33ED076F942052AED0BD5 /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoPlayerViewController.h; path = XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h; sourceTree = "<group>"; };
 		0DAE176985FFC8FED286FB4ED39C5CE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		0F4DD6D99FA58E80DB18458E8149E1D0 /* XCDYouTubeVideo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideo.m; path = XCDYouTubeKit/XCDYouTubeVideo.m; sourceTree = "<group>"; };
-		103365E0ABE0933305066604C564CDA6 /* Pods_sacred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_sacred.framework; path = "Pods-sacred.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		103365E0ABE0933305066604C564CDA6 /* Pods_sacred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sacred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		175C2F93010558B0EF357445885E62C4 /* Pods-sacred.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-sacred.modulemap"; sourceTree = "<group>"; };
 		17FD2F12C13E6742A66EB4923228B3CA /* XCDYouTubeVideoOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeVideoOperation.h; path = XCDYouTubeKit/XCDYouTubeVideoOperation.h; sourceTree = "<group>"; };
 		24D5651AEE62D200F966004025CF443F /* Pods-sacred-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sacred-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -102,10 +102,10 @@
 		74328C41E29DE857F23BD45183C8C4FC /* Pods-sacred-tvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sacred-tvOSTests-umbrella.h"; sourceTree = "<group>"; };
 		7870D41A23682F02CB7153EFEC6028E8 /* XCDYouTubeClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeClient.h; path = XCDYouTubeKit/XCDYouTubeClient.h; sourceTree = "<group>"; };
 		7D9C2597DCFA57CCCC70BC6BB601E075 /* XCDYouTubeOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeOperation.h; path = XCDYouTubeKit/XCDYouTubeOperation.h; sourceTree = "<group>"; };
-		7F378BC9CA57E7C1B525EAF3E0E49453 /* Pods_sacredTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_sacredTests.framework; path = "Pods-sacredTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F378BC9CA57E7C1B525EAF3E0E49453 /* Pods_sacredTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sacredTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8140196CB7788E1EB87C4EE5C48F6035 /* XCDYouTubeKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XCDYouTubeKit-Info.plist"; sourceTree = "<group>"; };
 		8398EECEDE054CCE9082978DB01CD113 /* Pods-sacredTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-sacredTests.modulemap"; sourceTree = "<group>"; };
-		842B7D6C4814D1257FF7380C8E0E4B92 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XCDYouTubeKit.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842B7D6C4814D1257FF7380C8E0E4B92 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A6750A37B712FFCB29F7A08BB76F80 /* XCDYouTubeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeKit.h; path = XCDYouTubeKit/XCDYouTubeKit.h; sourceTree = "<group>"; };
 		86B48192FD2D0AB716F2385408816D27 /* Pods-sacred-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sacred-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		88EACEF528FC92C4F5086E627B803E85 /* Pods-sacred-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sacred-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -115,13 +115,13 @@
 		934B21966A0534FBB8BC6D6263BDB8D2 /* Pods-sacred-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sacred-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		93E343B10B7C4DBF0E7F05F8DADFE3D0 /* Pods-sacred-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sacred-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		994D8FF7D14EA1BF2D1C601E36DF4674 /* XCDYouTubePlayerScript.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCDYouTubePlayerScript.h; path = XCDYouTubeKit/XCDYouTubePlayerScript.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A291F051D741341CB1CC606F0AC147E4 /* Pods-sacred.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sacred.release.xcconfig"; sourceTree = "<group>"; };
 		A717832B753DF3646635660C833E1990 /* Pods-sacredTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sacredTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A88C432D84B1B6F114C4EEDC5A4042FB /* Pods-sacred-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sacred-frameworks.sh"; sourceTree = "<group>"; };
 		AC1D142E3C1BD79479314EC1E936EF94 /* Pods-sacred-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sacred-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		ACC65B6AF68FA2636394D339113A4E7B /* Pods_sacred_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_sacred_tvOSTests.framework; path = "Pods-sacred-tvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1BFFB140641FC2FEFDE1CCE76EEE0D5 /* Pods_sacred_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_sacred_tvOS.framework; path = "Pods-sacred-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC65B6AF68FA2636394D339113A4E7B /* Pods_sacred_tvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sacred_tvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1BFFB140641FC2FEFDE1CCE76EEE0D5 /* Pods_sacred_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sacred_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2180C60C31A07E0D1AA3ABE0F3BEAE9 /* Pods-sacred-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sacred-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B58F09E261BB74F9AECA1DFC265F8935 /* XCDYouTubeDashManifestXML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeDashManifestXML.m; path = XCDYouTubeKit/XCDYouTubeDashManifestXML.m; sourceTree = "<group>"; };
 		B7D823A32311FD442E48D10C84A70C21 /* XCDYouTubeVideoOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCDYouTubeVideoOperation.m; path = XCDYouTubeKit/XCDYouTubeVideoOperation.m; sourceTree = "<group>"; };
@@ -243,7 +243,6 @@
 				5EE7312089883E863AFB3E8CB901BFB6 /* XCDYouTubeVideoWebpage.m */,
 				5E8344C435C0E32EDD66B8F49B4ED5CB /* Support Files */,
 			);
-			name = XCDYouTubeKit;
 			path = XCDYouTubeKit;
 			sourceTree = "<group>";
 		};
@@ -875,8 +874,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 				TVOS_DEPLOYMENT_TARGET = 9.2;
