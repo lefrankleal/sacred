@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'appex.sacred' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for appex.sacred
+
+  pod 'XCDYouTubeKit', '~> 2.8'
+
+  target 'appex.sacredTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'appex.sacred-tvOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for appex.sacred-tvOS
+
+  target 'appex.sacred-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
