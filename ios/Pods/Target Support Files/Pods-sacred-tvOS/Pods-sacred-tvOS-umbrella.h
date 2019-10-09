@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_appex_sacredVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_appex_sacredVersionString[];
+FOUNDATION_EXPORT double Pods_sacred_tvOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_sacred_tvOSVersionString[];
 

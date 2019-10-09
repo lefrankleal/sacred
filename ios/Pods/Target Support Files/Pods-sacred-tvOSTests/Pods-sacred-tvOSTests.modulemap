@@ -1,0 +1,6 @@
+framework module Pods_sacred_tvOSTests {
+  umbrella header "Pods-sacred-tvOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

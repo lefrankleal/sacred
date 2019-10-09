@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "appex.sacred-tvOS.app"
-               BlueprintName = "appex.sacred-tvOS"
-               ReferencedContainer = "container:appex.sacred.xcodeproj">
+               BuildableName = "sacred-tvOS.app"
+               BlueprintName = "sacred-tvOS"
+               ReferencedContainer = "container:sacred.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "appex.sacred-tvOSTests.xctest"
-               BlueprintName = "appex.sacred-tvOSTests"
-               ReferencedContainer = "container:appex.sacred.xcodeproj">
+               BuildableName = "sacred-tvOSTests.xctest"
+               BlueprintName = "sacred-tvOSTests"
+               ReferencedContainer = "container:sacred.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "appex.sacred-tvOSTests.xctest"
-               BlueprintName = "appex.sacred-tvOSTests"
-               ReferencedContainer = "container:appex.sacred.xcodeproj">
+               BuildableName = "sacred-tvOSTests.xctest"
+               BlueprintName = "sacred-tvOSTests"
+               ReferencedContainer = "container:sacred.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "appex.sacred-tvOS.app"
-            BlueprintName = "appex.sacred-tvOS"
-            ReferencedContainer = "container:appex.sacred.xcodeproj">
+            BuildableName = "sacred-tvOS.app"
+            BlueprintName = "sacred-tvOS"
+            ReferencedContainer = "container:sacred.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "appex.sacred-tvOS.app"
-            BlueprintName = "appex.sacred-tvOS"
-            ReferencedContainer = "container:appex.sacred.xcodeproj">
+            BuildableName = "sacred-tvOS.app"
+            BlueprintName = "sacred-tvOS"
+            ReferencedContainer = "container:sacred.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "appex.sacred-tvOS.app"
-            BlueprintName = "appex.sacred-tvOS"
-            ReferencedContainer = "container:appex.sacred.xcodeproj">
+            BuildableName = "sacred-tvOS.app"
+            BlueprintName = "sacred-tvOS"
+            ReferencedContainer = "container:sacred.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
