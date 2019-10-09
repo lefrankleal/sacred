@@ -4,7 +4,7 @@ import { Button, Text } from 'react-native-elements'
 // import Icon from 'react-native-vector-icons/Feather'
 import AuthStyle from '../../Styles/AuthStyle'
 import AsyncStorage from '@react-native-community/async-storage'
-import FBSDK from 'react-native-fbsdk'
+// import FBSDK from 'react-native-fbsdk'
 
 class Auth extends Component {
 
@@ -16,31 +16,31 @@ class Auth extends Component {
   }
 
   _checkLogin = () => {
-    FBSDK.AccessToken.refreshCurrentAccessTokenAsync().then(
-      (resp) => {
-        FBSDK.AccessToken.getCurrentAccessToken().then(
-          (data) => {
-            if (data && data.accessToken.toString()) {
-              this.props.navigation.navigate('Home')
-            } else {
-              AsyncStorage.setItem('isLogged', '0').then(() => {
-                this.props.navigation.navigate('Login')
-              })
-            }
-          },
-          (err) => {
-            AsyncStorage.setItem('isLogged', '0').then(() => {
-              this.props.navigation.navigate('Login')
-            })
-          }
-        )
-      },
-      (err) => {
-        AsyncStorage.setItem('isLogged', '0').then(() => {
-          this.props.navigation.navigate('Login')
-        })
-      }
-    )
+    // FBSDK.AccessToken.refreshCurrentAccessTokenAsync().then(
+    //   (resp) => {
+    //     FBSDK.AccessToken.getCurrentAccessToken().then(
+    //       (data) => {
+    //         if (data && data.accessToken.toString()) {
+    //           this.props.navigation.navigate('Home')
+    //         } else {
+    //           AsyncStorage.setItem('isLogged', '0').then(() => {
+    //             this.props.navigation.navigate('Login')
+    //           })
+    //         }
+    //       },
+    //       (err) => {
+    //         AsyncStorage.setItem('isLogged', '0').then(() => {
+    //           this.props.navigation.navigate('Login')
+    //         })
+    //       }
+    //     )
+    //   },
+    //   (err) => {
+    //     AsyncStorage.setItem('isLogged', '0').then(() => {
+    //       this.props.navigation.navigate('Login')
+    //     })
+    //   }
+    // )
   }
 
   _goToHome = () => {

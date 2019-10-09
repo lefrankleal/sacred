@@ -23,12 +23,6 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
-  private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
-
-  protected static CallbackManager getCallbackManager() {
-    return mCallbackManager;
-  }
-
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
@@ -40,7 +34,6 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
             new SvgPackage(),
-          new FBSDKPackage(mCallbackManager),
           new ReactNativeYouTube(),
           new AsyncStoragePackage(),
           new VectorIconsPackage(),
@@ -62,7 +55,6 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
-    FacebookSdk.sdkInitialize(getApplicationContext());
     AppEventsLogger.activateApp(this);
     SoLoader.init(this, /* native exopackage */ false);
   }

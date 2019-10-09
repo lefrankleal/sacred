@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FlatList, RefreshControl, Image, ScrollView, View } from 'react-native'
+import { RefreshControl, Image, ScrollView, View } from 'react-native'
 import { Header, Text } from 'react-native-elements'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import AboutStyle from '../../Styles/AboutStyle'

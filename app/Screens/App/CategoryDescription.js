@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Dimensions, RefreshControl, Image, ScrollView, View, SafeAreaView } from 'react-native'
 import { Header, Text } from 'react-native-elements'
-import CategoryDescriptionStyle from '../../Styles/CategoryDescriptionStyle'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Youtube from '../Components/Youtube'
 

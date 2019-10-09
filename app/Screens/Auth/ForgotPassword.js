@@ -4,7 +4,6 @@ import { Text, Button } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/Feather'
 // import ForgotPasswordStyle from '../../Styles/ForgotPasswordStyle'
 import AsyncStorage from '@react-native-community/async-storage'
-import { LoginManager, AccessToken } from 'react-native-fbsdk'
 
 class ForgotPassword extends Component {
 

@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-// import { View, Image, ImageBackground, Alert } from 'react-native'
 import { Text, Button } from 'react-native-elements'
-// import Icon from 'react-native-vector-icons/Feather'
-// import ResetPasswordStyle from '../../Styles/ResetPasswordStyle'
-// import AsyncStorage from '@react-native-community/async-storage'
-// import { LoginManager, AccessToken } from 'react-native-fbsdk'
 
 class ResetPassword extends Component {
 

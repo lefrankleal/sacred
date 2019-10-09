@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { View, Image, ImageBackground, Alert } from 'react-native'
+import { View, Image } from 'react-native'
 import { Text, Button } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/Feather'
-// import SignInStyle from '../../Styles/SignInStyle'
 import AsyncStorage from '@react-native-community/async-storage'
-import { LoginManager, AccessToken } from 'react-native-fbsdk'
 
 class SignIn extends Component {
 
@@ -19,23 +17,6 @@ class SignIn extends Component {
   }
 
   _fbLogin = () => {
-    LoginManager.logInWithReadPermissions(["public_profile"]).then(
-      (result) => {
-        if (result.isCancelled) {
-        } else {
-          AccessToken.getCurrentAccessToken().then(
-            (data) => {
-              AsyncStorage.multiSet([['loginType', 'facebook'], ['fbToken', data.accessToken.toString()]]).then(() => {
-                this._goToHome()
-              })
-            }
-          )
-        }
-      },
-      (error) => {
-        Alert.alert('Upss...', 'Hubo un problema iniciando tu sesion de facebook, intenta de nuevo.')
-      }
-    );
   }
 
   render() {
