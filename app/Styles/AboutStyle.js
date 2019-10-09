@@ -40,8 +40,6 @@ const AboutStyle = StyleSheet.create({
   bodyContent: {
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginHorizontal: width * 0.05,
-    maxHeight: 550
   },
   bodyTitle: {
     fontSize: 30,
@@ -60,7 +58,7 @@ const AboutStyle = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    alignContent: 'space-around',
+    alignContent: 'center',
     alignItems: 'center',
     paddingBottom: 30,
   },
@@ -68,7 +66,7 @@ const AboutStyle = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    width: width * 0.45,
+    width: width * 0.5,
     marginVertical: 5
   }
 });
