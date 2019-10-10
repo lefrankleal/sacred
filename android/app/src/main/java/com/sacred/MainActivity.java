@@ -1,4 +1,4 @@
-package com.appex.sacred;
+package com.sacred;
 
 import android.content.Intent;
 import com.facebook.react.ReactActivity;
@@ -14,7 +14,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "appex.sacred";
+        return "sacred";
     }
 
     @Override
