@@ -51,6 +51,8 @@
 		6AE2EB34C4EA42458F7FE96C /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFD18F108F784685B741B8CE /* MaterialIcons.ttf */; };
 		74C0803AB3344CE496314278 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EE73858A824FDC828840E4 /* libRNVectorIcons.a */; };
 		78589157234EA16A00245672 /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78589156234EA16A00245672 /* XCDYouTubeKit.framework */; };
+		78589187234EB59000245672 /* logo-text-vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = 78589185234EB58F00245672 /* logo-text-vertical.png */; };
+		78589188234EB59000245672 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78589186234EB59000245672 /* logo.png */; };
 		7E1E795343D6477EA3D6CCD2 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E72EA3AB5CD049EF90053439 /* libRNSVG-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8B7A5755D15C441C86B69944 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D799D3D8F420411BB949A524 /* Ionicons.ttf */; };
@@ -448,6 +450,8 @@
 		785890FE234E8F4C00245672 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78589113234E99FD00245672 /* XCDYouTubeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XCDYouTubeKit.h; path = Pods/XCDYouTubeKit/XCDYouTubeKit/XCDYouTubeKit.h; sourceTree = "<group>"; };
 		78589156234EA16A00245672 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = XCDYouTubeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78589185234EB58F00245672 /* logo-text-vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-text-vertical.png"; path = "../app/Assets/Images/logo-text-vertical.png"; sourceTree = "<group>"; };
+		78589186234EB59000245672 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../app/Assets/Images/logo.png; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7AA892D4A3AC4BEDBD6FC25E /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		7AF9B655FC004B8D941D0A35 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -630,6 +634,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				78589185234EB58F00245672 /* logo-text-vertical.png */,
+				78589186234EB59000245672 /* logo.png */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
@@ -1397,7 +1403,9 @@
 				E64EAC7249444914BADAC446 /* FontAwesome5_Solid.ttf in Resources */,
 				3692AC7AE681426D93E10EE7 /* Foundation.ttf in Resources */,
 				8B7A5755D15C441C86B69944 /* Ionicons.ttf in Resources */,
+				78589188234EB59000245672 /* logo.png in Resources */,
 				47574D6AA7AB4528908406C1 /* MaterialCommunityIcons.ttf in Resources */,
+				78589187234EB59000245672 /* logo-text-vertical.png in Resources */,
 				6AE2EB34C4EA42458F7FE96C /* MaterialIcons.ttf in Resources */,
 				5D19E623A594401A8817512C /* Octicons.ttf in Resources */,
 				BA09894BBD304DE9B7913179 /* SimpleLineIcons.ttf in Resources */,
