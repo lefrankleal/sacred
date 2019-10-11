@@ -1,2 +1,5 @@
 # Sacred
-Sacred Aoo made with React Native
+Sacred App made with React Native
+
+Need to install yarn
+Need dependencies jetifier to compile
