@@ -48,8 +48,8 @@ class Vape extends Component {
           leftComponent={{ icon: 'arrow-back', color: 'gray', onPress: () => this._goTo('back') }}
         />
         <ScrollView contentContainerStyle={VapeStyle.bodyContainer}>
-          <Image style={VapeStyle.mainImage} source={this.state.vapeImages[item.title.split(" ")[0].toLowerCase()]} />
-          <Text style={[VapeStyle.mainTitle, {color: item.color}]}>{item.title}</Text>
+          <Image style={VapeStyle.mainImage} source={{ uri: item.picture.url}} />
+          <Text style={[VapeStyle.mainTitle, {color: item.color}]}>{item.name}</Text>
           <Text style={VapeStyle.mainSubTitle}>{item.small_subtitle}</Text>
           <Text style={[VapeStyle.subTitle, {color: item.color}]}>{item.subtitle}</Text>
           <Text style={VapeStyle.description}>{item.description}</Text>

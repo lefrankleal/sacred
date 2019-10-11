@@ -23,11 +23,11 @@ const AboutStyle = StyleSheet.create({
     marginHorizontal: width * 0.05,
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 15
+    marginVertical: 15
   },
   headImage: {
-    width: width * 0.6,
-    maxHeight: width * 0.6,
+    width: width * 0.63,
+    height: width * 0.65,
   },
   headTitle: {
     fontSize: 20,
@@ -51,7 +51,7 @@ const AboutStyle = StyleSheet.create({
   },
   bodyImage: {
     width: width,
-    maxHeight: 300,
+    height: 300,
     resizeMode: 'contain',
   },
   bodyFooter: {

@@ -15,11 +15,43 @@ class Home extends Component {
     super(props);
     this.state = {
       refreshing: false,
+      data: {}
     }
+  }
+
+  componentWillMount = () => {
+    this._getData()
   }
 
   _goTo = (view) => {
     this.props.navigation.navigate(view)
+  }
+
+  _getData = () => {
+    this.setState({ refreshing: true })
+    fetch(Globals.SEVER_API_URL + '/home', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json().then(
+      json => ({
+        url: res.url,
+        headers: res.headers.map,
+        status: {
+          status: res.status,
+          statusText: res.statusText || ''
+        },
+        body: json
+      })
+    )).then((res) => {
+      this.setState({ refreshing: false })
+      this.setState({ 'data': res.body })
+    }).catch((error) => {
+      this.setState({ refreshing: false })
+      Alert.alert('Error', 'Something is wrong with your request, please verify you have network connection and be sure you have entered a valid URL')
+    })
   }
 
   render() {
@@ -41,67 +73,39 @@ class Home extends Component {
             />
           }>
           <View style={HomeStyle.Introduction}>
-            <Youtube video='uQaQVSRak4E' />
+            <Youtube video={this.state.data && this.state.data.video ? this.state.data.video.id : 'uQaQVSRak4E'} />
             <Text style={HomeStyle.introductionTitleText}>
-              A Gift From Mother Earth
+              {this.state.data? this.state.data.title : '' }
             </Text>
-            <Text style={HomeStyle.introductionText}>
-              Sacred Medicine is A Gift from Mother Earth with an objective to purify, restore and balance the body, mind and soul through the respect and understanding of its very essence, adequate rituals for its proper use and function throughout all of its forms and nuances.
-            </Text>
+            <Text style={HomeStyle.introductionText}>{this.state.data? this.state.data.description : '' }</Text>
           </View>
           <View style={HomeStyle.SacredLifeStyleLogo}>
-            <Image style={{ height: 80, width: width * 0.8 }} resizeMode='contain' source={require('../../Assets/Images/sacred-lifestyle-logo.png')} />
+          {this.state.data && this.state.data.picture &&
+            <Image style={{ height: 80, width: width * 0.8 }} resizeMode='contain' source={{uri: this.state.data.picture.url}} />
+          }
           </View>
           <View>
-            <Text style={HomeStyle.SacredLifeStyleText}>
-              It’s time to start using our intuition and take control of our being while working towards more important and transcendent goals.
-              {'\n\n'}
-              The time has come to return to Mother Earth all that she gives us in abundance by beginning to practice a SACRED lifestyle that allows us to live in peace and harmony with a joyful outlook that frees your spirit and drives your creativity towards a true spiritual awakening!
-            </Text>
+            <Text style={HomeStyle.SacredLifeStyleText}>{this.state.data ? this.state.data.description_second : '' }</Text>
           </View>
           <View style={HomeStyle.SacredLifeStyleItems}>
-            <TouchableOpacity style={HomeStyle.SacredLifeStyleItem}>
-              <View style={HomeStyle.SacredLifeStyleHeader}>
-                <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/innovation.jpg')} />
-              </View>
-              <View style={HomeStyle.SacredLifeStyleContent}>
-                <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/innovation-logo.png')} />
-                <View style={{ flex: 4 }}>
-                  <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Innovation</Text>
-                  <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
-                    Innovation fuels our daily life. By recognizing its power and creativity we shape the future with a holistic approach.
-                  </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={HomeStyle.SacredLifeStyleItem} onPress={() => this._goTo('About')}>
-              <View style={HomeStyle.SacredLifeStyleHeader}>
-                <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/products.jpg')} />
-              </View>
-              <View style={HomeStyle.SacredLifeStyleContent}>
-                <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/products-logo.png')} />
-                <View style={{ flex: 4, marginVertical: 10 }}>
-                  <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Products</Text>
-                  <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
-                    We are committed to work everyday setting forth our knowledge and industry’s best practices to our customers. By utilizing science we create products that help people live better lives.
-                </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={HomeStyle.SacredLifeStyleItem}>
-              <View style={HomeStyle.SacredLifeStyleHeader}>
-                <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/sustainability.jpg')} />
-              </View>
-              <View style={HomeStyle.SacredLifeStyleContent}>
-                <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/sustainability-logo.png')} />
-                <View style={{ flex: 4 }}>
-                  <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>Sustainability</Text>
-                  <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>
-                    For Sacred Medicine, sustainability means shaping the future with responsibility and commitment with Mother Earth as an integral part of our corporate strategy.
-                </Text>
-                </View>
-              </View>
-            </TouchableOpacity>
+            {this.state.data && this.state.data.items && this.state.data.items.map(
+              (item, index) => {
+                return (
+                  <TouchableOpacity key={index} style={HomeStyle.SacredLifeStyleItem} onPress={() => { item.name == 'Products' ? this._goTo('About') : '' }}>
+                    <View style={HomeStyle.SacredLifeStyleHeader}>
+                      <Image style={HomeStyle.SacredLifeStyleHeaderImage} source={require('../../Assets/Images/innovation.jpg')} />
+                    </View>
+                    <View style={HomeStyle.SacredLifeStyleContent}>
+                      <Image style={HomeStyle.SacredLifeStyleContentImage} resizeMode='contain' source={require('../../Assets/Images/innovation-logo.png')} />
+                      <View style={{ flex: 4 }}>
+                        <Text style={HomeStyle.SacredLifeStyleContentTextTitle}>{item.name}</Text>
+                        <Text style={HomeStyle.SacredLifeStyleContentTextDescription}>{item.description}</Text>
+                      </View>
+                    </View>
+                  </TouchableOpacity>
+                )
+              }
+            )}
           </View>
         </ScrollView>
       </SafeAreaView>

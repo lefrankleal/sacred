@@ -16,7 +16,7 @@ class Ritual extends Component {
     super(props);
     this.state = {
       refreshing: false,
-      items: []
+      data: []
     }
   }
 
@@ -25,14 +25,14 @@ class Ritual extends Component {
   }
 
   componentDidMount = () => {
-    this._getItems()
+    this._getData()
   }
 
   _goTo = (view) => {
     this.props.navigation.navigate(view)
   }
 
-  _getItems = () => {
+  _getData = () => {
     this.setState({ refreshing: true })
     fetch(Globals.SEVER_API_URL + '/rituals', {
       method: 'GET',
@@ -52,7 +52,7 @@ class Ritual extends Component {
       })
     )).then((res) => {
       this.setState({ refreshing: false })
-      this.setState({ 'items': res.body })
+      this.setState({ 'data': res.body })
     }).catch((error) => {
       this.setState({ refreshing: false })
       Alert.alert('Error', 'Something is wrong with your request, please verify you have network connection and be sure you have entered a valid URL')
@@ -78,7 +78,7 @@ class Ritual extends Component {
           refreshControl={
             <RefreshControl
               refreshing={this.state.refreshing}
-              onRefresh={this._getItems}
+              onRefresh={this._getData}
             />
           }>
           <View style={{ paddingHorizontal: 25 }}>
@@ -88,20 +88,12 @@ class Ritual extends Component {
             <Image style={{ width: '100%' }} source={require('../../Assets/Images/shop-banner.png')} />
           </View>
           <View style={RitualStyle.intro}>
-            <Text style={RitualStyle.introTitle}>LET GO RITUAL | FORGIVENESS | HEAL YOUR NEGATIVE EMOTIONS | RELEASE TENSION | LET GO OF BODY ACHES AND PAINS</Text>
-            <Text style={RitualStyle.introDescription}>
-              Sacred Medicine’s rituals, meditations, and recipes can be considered elixirs that purify, restore, and balance the mind and blood flow, which significantly contribute to awakening the soul.
-              {'\n\n'}
-              It is essential to maintain this lifestyle as sacred, remembering that the sacred is divine, that we must treat it with respect and use it only when necessary.
-              {'\n\n'}
-              This way of living will help you enjoy a peaceful and harmonious life, with a joyful outlook, free of the toxic thoughts that can affect your health.
-              {'\n\n'}
-              Whatever the outcome you seek, Sacred Medicine will come first to cleanse your heart, then your thoughts and, finally, your body.
-            </Text>
+            <Text style={RitualStyle.introTitle}>{this.state.data ? this.state.data.title : '' }</Text>
+            <Text style={RitualStyle.introDescription}>{this.state.data ? this.state.data.description : '' }</Text>
           </View>
           <View
             style={RitualStyle.ritualsContainer}>
-            {this.state.items && this.state.items.length > 0 && this.state.items.map(
+            {this.state.data && this.state.data.items && this.state.data.items.length > 0 && this.state.data.items.map(
               (v, i) => {
                 return (
                   <View key={i} style={RitualStyle.itemContainer}>
