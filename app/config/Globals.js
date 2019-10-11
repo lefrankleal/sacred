@@ -1,7 +1,6 @@
 export default Globals = {
   YOUTUBE_APIKEY: 'AIzaSyBgVBYvJ9Vn3Fd4GlNchQuy11t2aagSvoQ',
   SEVER_API_URL: 'https://sacred.appexsystems.com/api',
-  // SEVER_API_URL: 'https://8d999b59.ngrok.io/api',
   THEME: {
     Input: {
       containerStyle: {
