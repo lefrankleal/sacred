@@ -1,5 +1,10 @@
 # Sacred
 Sacred App made with React Native
 
-Need to install yarn
-Need dependencies jetifier to compile
+
+## Dependencies
+
+- yarn
+
+- jetifier: after installing it as global package run ```npmx jetify``` inside project folder
+
